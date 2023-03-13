@@ -1,122 +1,69 @@
-<style> 
-/* Tombol Download Sempetin */
-#btn-keren {
-  margin: 10px auto;
-  text-align: center;
-
+<html>
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+</head>
+  
+  <style> 
+  .divbotao{
+  display:flex;
+  justify-content: center;
+  height: 80px;
+  border: 2px;
+    margin-top: 20px;
 }
 
-.btn-keren3 {
-  position: relative;
-  display: inline-block;
-  height: 50px;
-  width: 215px;
-  line-height: 50px;
-  padding: 0;
-  border-radius: 50px;
-  background: #f1f1f1;
-  border: 2px solid #009688;
-  margin: 10px;
-  transition: 0.5s;
-}
 
-.btn-keren3 {
-  border: 2px #292927;
-}
+    .social {
+      background-color: #eae9e9;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+    }
 
-.btn-keren3:hover {
-  background-color: #292927;
-  border: 2px solid #fdfdfd;
-}
+    .social:hover {
+      color: #fff;
+    }
 
-.btn-keren3:hover span.circle3 {
-  left: 100%;
-  margin-left: -45px;
-  background-color: #fdfdfd;
-}
+    .icon {
+      font-size: 1.2em;
+    }
 
-.btn-keren3:hover span.circle3 {
-  color: #292927;
-}
+    .blog:hover {
+      background-color: black;
+    }
 
-.btn-keren3:hover span.title3 {
-  left: 40px;
-  opacity: 0;
-}
+  </style>
+  
+  
+<body>
 
-.btn-keren3:hover span.title-hover3 {
-  opacity: 1;
-  left: 40px;
-}
+  <div class= "divbotao"> 
+      <div id="blog" onclick="navigate(this.id)" class="social blog">
+        <span class ="icon">
+ <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+        </span>
 
-.btn-keren3 span.circle3 {
-  display: block;
-  background-color: #292927;
-  color: #fff;
-  position: absolute;
-  float: left;
-  margin: 5px;
-  line-height: 55px;
-  height: 40px;
-  width: 40px;
-  top: 0;
-  left: 0;
-  transition: 0.5s;
-  border-radius: 50%;
-}
-
-.btn-keren3 span.circle3 {
-  background-color: #292927;
-}
-.btn-keren1 span.title,
-.btn-keren1 span.title-hover,
-.btn-keren2 span.title2,
-.btn-keren2 span.title-hover2,
-.btn-keren3 span.title3,
-.btn-keren3 span.title-hover3 {
-  position: absolute;
-  left: 90px;
-  text-align: left;
-  margin: 0 auto;
-    font-weight: 600;
-    cursor: pointer;
-    font-family: museo_sans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  color: #292927;
-  transition: 0.5s;
-   font-size: 17px;
-}
-.btn-keren2 span.title2,
-.btn-keren2 span.title-hover2 {
-  color: #292927;
-  left: 80px;
-}
-.btn-keren3 span.title3,
-.btn-keren3 span.title-hover3 {
-  color: #292927;
-  left: 80px;
-}
-.btn-keren1 span.title-hover,
-.btn-keren2 span.title-hover2,
-.btn-keren3 span.title-hover3 {
-  left: 80px;
-  opacity: 0;
-}
-.btn-keren1 span.title-hover,
-.btn-keren2 span.title-hover2,
-.btn-keren3 span.title-hover3 {
-  color: #fff;
-}
-
-</style>
-
-
-<div id="btn-keren">
-<a href="https://kinzen.com.br/" class="btn-keren3" target="_blank">
-<span class="circle3"><svg style="width:24px;height:24px" viewBox="0 0 24 24"> <path fill="currentColor" d="M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z" />
-</svg></span>
-<span class="title3">Loja Online</span>
-<span class="title-hover3">Loja Kin Zen</span>
-</a>
+      </div>
 </div>
+  
+  <script>
+      function navigate(id) {
+
+        //if you want the URL to open in the same window use '_parent'  instead of '_blank'
+
+        if (id === "blog")
+          window.open("https://blog.kinzen.com.br/", '_blank').focus(); //Add the url to your blog
+        
+      }
+</script>
+
+</body>
+</html>
+
